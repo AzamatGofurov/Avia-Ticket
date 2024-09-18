@@ -1,0 +1,714 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: aliceblue;
+}
+
+/* Container to centralize content and prevent stretching */
+.container {
+    max-width: 1200px; /* Adjust this width based on your design */
+    margin: 20px auto; /* Center the container and add top/bottom spacing */
+    padding: 0 20px; /* Optional: Add padding to the sides */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px; /* Rounded corners for the header */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 40px; /* Space between nav links and social icons */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between each list item */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #1a1a1a; /* Default color for links */
+    font-weight: 460;
+    font-size: 18px;
+    font-family: "Open sans", sans-serif;
+}
+
+.nav-links li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    list-style: none;
+}
+
+.social-links li {
+    margin-left: 15px; /* Space between each social icon */
+}
+
+.social-links li a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Active link styling */
+.nav-links li a.active {
+    color: #ccc; /* Gray color for active link */
+}
+
+/* Container */
+.container {
+    max-width: 1200px; /* Adjust based on your design */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Optional padding */
+    background-color: white;
+}
+
+/* Hero section */
+.hero {
+    margin: 10px 0;
+    position: relative; /* To allow the overlay */
+    height: 80vh; /* Full viewport height */
+    background-image: url(../images/skywindow.png); /* Replace with actual image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px; /* Optional: Add some border radius to match the design */
+    background-color: #fff;
+}
+
+/* Overlay to darken background for text contrast */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Darken overlay */
+    z-index: 1;
+}
+
+/* Title Styling */
+.hero h1 {
+    position: relative; /* Above the overlay */
+    width: 700px;
+    top: 250px;
+    right: 100px;
+    z-index: 2;
+    font-size: 3.5em;
+    color: #fff; /* White for contrast */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Shadow for text visibility */
+    margin: 0;
+    padding: 0 20px;
+    font-family: "Jost", sans-serif;
+    letter-spacing: 5px;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* Container for the form section */
+.form-section {
+    background-color: #0d1631; /* Dark background */
+    color: white;
+    padding: 60px 20px;
+    border-radius: 15px; /* Rounded corners */
+    max-width: 1200px; /* Limit width */
+    margin: 50px auto; /* Center the container */
+}
+
+/* Flexbox container to layout the text and form side by side */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Text content styling */
+.form-text {
+    flex: 1; /* Text takes up one part */
+    max-width: 600px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.form-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: "Jost", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.form-text h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.form-text p {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Form box styling */
+.form-box {
+    flex: 1; /* Form takes up the other part */
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Form input styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Checkbox and privacy link styling */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.checkbox a {
+    color: #90caf9;
+    text-decoration: none;
+}
+
+/* Submit button styling */
+button {
+    padding: 12px;
+    border: none;
+    background-color: #fff;
+    color: #0d1631;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #90caf9;
+}
+
+
+/* General section styles */
+.luxury-section {
+    padding: 60px 20px; /* Bo'limning ichki chekkalari */
+    background-color: #f8f8f8; /* Fon rangi */
+}
+
+.luxury-container {
+    display: flex; /* Elementlarni yonma-yon joylashtirish */
+    align-items: flex-start; /* Yuqoridan hizalash */
+    max-width: 1200px; /* Bo'limning maksimal kengligi */
+    margin: 0 auto; /* Bo'limni markazlashtirish */
+    gap: 40px; /* Rasm va matn orasidagi bo'shliq */
+    position: relative;
+}
+
+/* Sticky image container */
+.luxury-image {
+    flex: 1; /* Rasm bo'limining kengligi */
+    position: sticky; /* Yopishqoq pozitsiya */
+    top: 20px; /* Scroll paytida sahifa yuqorisidan 20px pastda yopishadi */
+    height: auto;
+    overflow: hidden; /* Rasm konteynerdan chiqmasligi uchun */
+}
+
+.luxury-image img {
+    width: 100%; /* Rasmning kengligi */
+    border-radius: 15px; /* Rasm burchaklarini yumaloq qilish */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Rasmga yengil soyalar berish */
+}
+
+/* Text content styling */
+.luxury-text {
+    flex: 1; /* Matn uchun kenglik */
+    font-family: 'Georgia', serif; /* Shrift uslubi */
+    color: #333; /* Matn rangi */
+    line-height: 1.6; /* Qatorlar orasidagi bo'shliq */
+}
+
+.luxury-text h2 {
+    font-size: 2.2em; /* Sarlavha o'lchami */
+    font-weight: bold;
+    color: #1a1a1a; /* Sarlavha rangi */
+    margin-bottom: 20px;
+}
+
+.luxury-text p {
+    margin-bottom: 20px; /* Paragrafdan keyingi bo'shliq */
+    font-size: 1.15em; /* Matn o'lchami */
+    color: #555; /* Matn rangi */
+}
+
+.luxury-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0d1631; /* Tugma fon rangi */
+    color: #fff; /* Oq tugma matni */
+    border: none;
+    border-radius: 5px; /* Tugma burchaklarini yumaloq qilish */
+    font-size: 1.1em; /* Tugma matni kattaligi */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hover paytida silliq o'zgarish */
+}
+
+.luxury-button:hover {
+    background-color: #1e2f58; /* Hover paytida rang o'zgaradi */
+}
+
+/* Mobil qurilmalar uchun moslashuv */
+@media (max-width: 768px) {
+    .luxury-container {
+        flex-direction: row; /* Mobil qurilmalarda ustma-ust joylashadi */
+    }
+
+    .luxury-image {
+        position: sticky; /* Mobilda sticky pozitsiya yo'qoladi */
+        margin-bottom: 20px; /* Rasm va matn orasidagi bo'shliq */
+    }
+}
+
+/* Bo'lim fonini, matn rangini va shriftini stil qilish */
+.features-section {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sarlavha stilizatsiyasi */
+.features-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #141223;
+    margin-bottom: 40px;
+    
+}
+
+/* Konteynerga kenglik qo'shish va markazlash */
+.features-container {
+    display: flex;
+    justify-content: space-between; /* Kartalarni yonma-yon hizalash */
+    flex-wrap: wrap; /* Kichik ekranlar uchun moslashuv */
+    gap: 20px; /* Kartalar orasidagi bo'shliq */
+    max-width: 1200px; /* Konteynerning maksimal kengligi */
+    margin: 0 auto; /* Konteynerni markazga hizalash */
+}
+
+/* Har bir karta uchun */
+.feature-card {
+    background-color: #19253c;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    flex: 1 1 calc(25% - 20px); /* Kartaning kengligi: 4 ta karta sig'adi */
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekti */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartadagi ikonka joylashuvi */
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+/* Karta sarlavhalari */
+.feature-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Karta ichidagi tavsif matni */
+.feature-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #d1d5db;
+}
+
+/* Mobil qurilmalar uchun moslashuv */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column; /* Kichik ekranlar uchun vertikal hizalanadi */
+        align-items: center;
+    }
+
+    .feature-card {
+        max-width: 100%; /* Har bir karta to'liq ekran kengligiga moslashadi */
+        margin-bottom: 20px;
+    }
+}
+
+/* Umumiy bo'lim uchun */
+.plane-info-container {
+    font-family: 'Arial', sans-serif;
+    color: #19253c;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tab Menu stili */
+.tab-menu {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.tab-button {
+    background-color: #fff;
+    border: 2px solid #4A90E2;
+    color: #4A90E2;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transform: translateY(0);
+    transition: all 0.7s;
+}
+
+/* Seat map va rasm */
+.seat-map-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0d2547;
+    border-radius: 10px;
+}
+
+.seat-map {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Plane info va checkbox stili */
+.plane-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background-color: #19253c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.info-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Safety bo'limi uchun sarlavha */
+#safety h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+/* Safety matn stilizatsiyasi */
+.safety-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.safety-info p {
+    width: 48%;
+    color: #19253c;
+    line-height: 1.6;
+}
+
+/* Ikkita rasm joylashuvi */
+.safety-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.safety-image {
+    width: 48%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobil qurilmalar uchun */
+@media (max-width: 768px) {
+    .safety-info {
+        flex-direction: column;
+    }
+
+    .safety-info p {
+        width: 100%;
+    }
+
+    .safety-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .safety-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* FAQ Umumiy Konteyner */
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #19253c;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Sarlavha */
+.faq-container h2 {
+    font-size: 2.5em;
+    color: #19253c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* FAQ savol va javoblar grid */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FAQ savol tugmachalari */
+.faq-item {
+    background-color: #131d35;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #131d35;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #242e4d;
+}
+
+/* Javob bo'limi */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    color: #19253c;
+    line-height: 1.6;
+}
+
+/* Aktiv bo'lim */
+.faq-answer.active {
+    max-height: 500px;
+}
+
+/* Mobil responsivlik uchun */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Umumiy sektsiya */
+.airplane-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3266;
+    padding: 50px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+/* Formani joylash */
+.form-section {
+    width: 45%;
+    color: white;
+}
+
+.form-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.form-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    display: grid;
+    gap: 15px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"] {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.signup-form label {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.signup-form button {
+    background-color: white;
+    color: #1E3266;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #ccc;
+}
+
+/* Samolyot rasm joylashuvi */
+.airplane-image {
+    position: absolute;
+    bottom: -10px;
+    left: -80px; /* Samolyotning ekrandagi joylashuvi */
+}
+
+.airplane-img {
+    width: 450px;
+    max-width: 100%;
+}
+
