@@ -28,6 +28,7 @@ body {
 
 .logo img {
     width: 150px;
+    border-radius: 50px 50px;
 }
 
 .navbar {
@@ -651,7 +652,7 @@ button:hover {
 
 /* Formani joylash */
 .form-section {
-    width: 45%;
+    width: 50%;
     color: white;
 }
 
@@ -703,12 +704,12 @@ button:hover {
 /* Samolyot rasm joylashuvi */
 .airplane-image {
     position: absolute;
-    bottom: -10px;
-    left: -80px; /* Samolyotning ekrandagi joylashuvi */
+    bottom: 0;
+    left: -150px; /* Samolyotning ekrandagi joylashuvi */
 }
 
 .airplane-img {
-    width: 450px;
+    width: 500px;
     max-width: 100%;
+    transform: rotateY(180deg); /* Samolyotni to'g'ri burish */
 }
-
